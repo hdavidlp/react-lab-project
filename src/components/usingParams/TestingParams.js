@@ -18,3 +18,11 @@ function TestingParams() {
 }
 
 export default TestingParams
+
+
+/* 
+Notes:
+This Example shows hoe to send value parameters to the component
+
+
+*/

@@ -47,3 +47,14 @@ export {WelcomeMessageAlternative, WelcomeMessageDestructing}
 
 
 
+/* 
+Notes:
++ Easy way to recive a prop : WelcomeMessage(props), to use {props.text}  {props.myParameter}
++ Another way : functionMane =({ param1, param2 })=>, to use {param1}  {param2}
++ Destructing way : functionDestructing=({name, ...props })=>, to use <div {...props}>
+
+To assign default parameters value use : WelcomeMessage.defaultProps = {text: 'Param Text not present'}
+To define types and prevent other values: WelcomeMessage.propTypes = {text : PropTypes.string.isRequired}
+
+
+*/

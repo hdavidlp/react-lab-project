@@ -9,3 +9,10 @@ const ChildrenParam=({children})=> {
 }
 
 export default ChildrenParam
+
+
+
+/* 
+Notes:
++ {children} parameter allow to pass components
+*/
