@@ -8,16 +8,37 @@ import TestingComponent from './components/01_DefineComponents/TestingComponent'
 import UseStatePractice from './components/02_UseState/text-change/UseStatePractice'
 import UseStateArray from './components/02_UseState/array-change/UseStateArray'
 import TestingParams from './components/03_UsingParams/TestingParams';
+import TestUseEffect from './components/04_useEffect/TestUseEffect';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [showComponentsSection, setShowComponentsSection] = useState(true)
+
+
   return (
     <div >
-      <MenuGeneralPractice /> 
-      <TestingComponent />
+
+      {/* <div className="form-group">
+        <label>
+          <input type="checkbox"
+            name='allowUpdateContext' 
+            checked={allowUpdatContext}
+            onChange={handleUpdateContext} 
+          />
+          Components Section
+        </label>
+
+      </div> */}
+
+      
+      <MenuGeneralPractice />
+      {/* <TestingComponent />
       <UseStatePractice />
       <UseStateArray />
       <TestingParams /> 
+      <TestUseEffect /> */}
     </div>
   );
 }
