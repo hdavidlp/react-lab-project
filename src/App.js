@@ -1,14 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
-import TestingComponent from './components/defineComponents/TestingComponent';
-import TestingParams from './components/usingParams/TestingParams';
+
+import MenuGeneralPractice from './components/00_GeneralPractice/MenuGeneralPractice';
+import TestingComponent from './components/01_DefineComponents/TestingComponent';
+import TestingParams from './components/03_UsingParams/TestingParams';
+
 
 
 
 function App() {
   return (
     <div >
+      <MenuGeneralPractice />
       <TestingComponent />
       <TestingParams />
     </div>
