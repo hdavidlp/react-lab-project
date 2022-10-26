@@ -1,13 +1,17 @@
 import React from 'react'
 
+import HeaderSection from '../shared/HeaderSection'
 import WelcomeMessage, { WelcomeMessageAlternative, WelcomeMessageDestructing } from './WelcomeMessage'
 import ChildrenParam from './ChildrenParam'
 
 function TestingParams() {
     return (
         <div className='container'>
-            <h2>Props</h2>
-            <p>This example shows how to manage parameters in your react components</p>
+            <HeaderSection 
+                name = 'Using Props and arguments'
+                smallDescription='This example shows how to manage parameters in your react components'
+            />
+            
             <WelcomeMessage text="Hellow Worlds" myParameter="2nd Param grouped" />
             <WelcomeMessage />
             <WelcomeMessageAlternative param1="1st Individual" param2="2nd Individual" />
