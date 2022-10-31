@@ -10,19 +10,21 @@ const initialState = fieldsList.map(field=> ({...field, ready:false, value:""}))
 const Form = () => {
 
   const [fieldsReady, setFieldsReady] = useState(false)
-  const [listo, setListo] = useState('Not ready to send')
   const [fieldsForm, setFieldsForm] = useState(initialState)
 
   useEffect(()=> {
-    setFieldsReady(true)
-    setListo('Ready to send')
-    fieldsForm.map((field) =>{
-      if (!field.ready) {
-        setFieldsReady(false)
-        setListo('Not ready to send')
-      }
-    });
+    setFieldsReady(
+      !fieldsForm.some((field) => field.ready === false)
+    )  
+    
+    console.log (`Status field ready : ${fieldsReady}`)
   }, [fieldsForm]);
+
+  function isValidForm(){
+    return fieldsReady
+  }
+
+  const  isButtonDisabled = !isValidForm()
 
   const handleOnChange = (e) => {
     const { name, value } = e.target
@@ -57,19 +59,24 @@ const Form = () => {
         {fieldsForm.map((field) =>(
           <Input
             key={field.name} 
-            name= {field.name}
-            label={field.label} 
-            value ={field.value}
-            type={field.type}
+            // name= {field.name}
+            // label={field.label} 
+            // value ={field.value}
+            // type={field.type}
             onChange = {handleOnChange}
+            
+            {...field} 
+            // ..field this command map each equal field with the value of the objet
+            // is similar to name = {field.name} label ={field.label} etc
             />
           ))
         }
 
       </div>
       <div className="form-actions">
-        <Button title="Clear" handleClick={handleClickClear} className='button-cancel'/>
-        <Button title={listo} handleClick={handleClickSubmit} isDisabled={!fieldsReady}/>
+        <Button title="Clear" onClick={handleClickClear} className='button-cancel'/>
+        <Button title= {`${fieldsReady ? "R":"Not r"}eady to send`} 
+        onClick={handleClickSubmit} disabled={isButtonDisabled}/>
       </div>
     </Card>
   )

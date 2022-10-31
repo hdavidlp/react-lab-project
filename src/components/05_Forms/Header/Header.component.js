@@ -31,7 +31,7 @@ const Header = ({ title }) => {
     <header className="App-header">
       <ReactLogo logo={logo} className = {infoHeader.useClass} />
       <h3>{title}</h3>
-      <Button title = {infoHeader.title} handleClick={handleClick}/>
+      <Button title = {infoHeader.title} onClick={handleClick}/>
     </header>
   );
 };
