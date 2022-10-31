@@ -9,6 +9,7 @@ import UseStatePractice from './components/02_UseState/text-change/UseStatePract
 import UseStateArray from './components/02_UseState/array-change/UseStateArray'
 import TestingParams from './components/03_UsingParams/TestingParams';
 import TestUseEffect from './components/04_useEffect/TestUseEffect';
+import TextForm from './components/05_Forms/TextForm';
 import { useState } from 'react';
 
 
@@ -30,15 +31,16 @@ function App() {
           Components Section
         </label>
 
-      </div> */}
+      </div> 
 
       
       <MenuGeneralPractice />
-      {/* <TestingComponent />
+      <TestingComponent />
       <UseStatePractice />
       <UseStateArray />
       <TestingParams /> 
       <TestUseEffect /> */}
+      <TextForm />
     </div>
   );
 }
