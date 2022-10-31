@@ -21,6 +21,8 @@ function App() {
   return (
     <div >
 
+<MenuGeneralPractice />
+
       {/* <div className="form-group">
         <label>
           <input type="checkbox"
@@ -39,8 +41,8 @@ function App() {
       <UseStatePractice />
       <UseStateArray />
       <TestingParams /> 
-      <TestUseEffect /> */}
-      <TextForm />
+      <TestUseEffect /> 
+      <TextForm />*/}
     </div>
   );
 }
