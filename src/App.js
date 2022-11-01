@@ -10,6 +10,8 @@ import UseStateArray from './components/02_UseState/array-change/UseStateArray'
 import TestingParams from './components/03_UsingParams/TestingParams';
 import TestUseEffect from './components/04_useEffect/TestUseEffect';
 import TextForm from './components/05_Forms/TextForm';
+import TestingAxiosAPI from './components/06_AxiosAPI/TestingAxiosAPI';
+
 import { useState } from 'react';
 
 
@@ -21,7 +23,7 @@ function App() {
   return (
     <div >
 
-<MenuGeneralPractice />
+{/* <MenuGeneralPractice /> */}
 
       {/* <div className="form-group">
         <label>
@@ -43,6 +45,8 @@ function App() {
       <TestingParams /> 
       <TestUseEffect /> 
       <TextForm />*/}
+
+      <TestingAxiosAPI />
     </div>
   );
 }

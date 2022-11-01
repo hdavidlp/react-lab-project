@@ -1,3 +1,5 @@
-import Header from "./Header.component";
+//import Header from "./Header.component";
 
-export { Header }
+//import { Header } from "./Header.component.js"
+
+//export { Header }
