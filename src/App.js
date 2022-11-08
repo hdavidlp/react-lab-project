@@ -23,7 +23,7 @@ function App() {
   return (
     <div >
 
-{/* <MenuGeneralPractice /> */}
+ <MenuGeneralPractice /> 
 
       {/* <div className="form-group">
         <label>
@@ -44,9 +44,17 @@ function App() {
       <UseStateArray />
       <TestingParams /> 
       <TestUseEffect /> 
-      <TextForm />*/}
+      <TextForm />
 
-      <TestingAxiosAPI />
+      <TestingAxiosAPI />*/}
+
+      {/* <MenuGeneralPractice /> */}
+      {/* // Test Driven Development
+      <p>
+        Hola mundo
+        <p data-testid="content"> XXXX</p>
+      </p> */}
+
     </div>
   );
 }

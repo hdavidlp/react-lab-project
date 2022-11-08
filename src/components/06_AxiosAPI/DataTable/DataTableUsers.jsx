@@ -3,12 +3,14 @@ import axios from "axios"
 import { Button } from '@mui/material'
 
 import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+
+//import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+// import TableHead from '@mui/material/TableHead';
+import TableHeader from '../UsersTableHeader/TableHeader.component';
+//import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import TableBodyUsers from '../UsersTableBody/TableBody.component';
 
 
 function DataTableUsers() {
@@ -28,45 +30,13 @@ function DataTableUsers() {
   }
   return (
     <div className='container'>
-      <ul>
-        <li>Llamadas APIS</li>
-        <li>Uso de Fetch y AXIOS ambos son para traer datos desde un API</li>
-        <li>librerias de stilos: Material UI MUI y Styled-Components</li>
-      </ul>
-   
-      
-      <div className='container'>
-        <Button variant="outlined" onClick={getQuote}>Get Data</Button>
-
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Id</TableCell>
-                <TableCell align="left">Nombre</TableCell>
-                <TableCell align="left">e-mail</TableCell>
-                
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {quote.map((element) => (
-                <TableRow
-                  key={element.id}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    <button key={element.id} name={element.name}>
-                      {element.id}
-                    </button>
-                  </TableCell>
-                  <TableCell align="left">{element.name}</TableCell>
-                  <TableCell align="left">{element.email}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
+      <Button variant="outlined" onClick={getQuote}>Get Data</Button>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+          <TableHeader />
+          <TableBodyUsers dsUsers = {quote}/>
+        </Table>
+      </TableContainer>
     </div>
   )
 }
